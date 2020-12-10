@@ -28,7 +28,7 @@ public class MailService {
             messageHelper.setSubject(notificationEmail.getSubject());
             messageHelper.setText(notificationEmail.getBody());
         };
-
+        // TODO: Dont forget to get rid of mailserver config before pushing to github public repo
         try {
             mailSender.send(messagePreparator);
             log.info("Activation email sent!");
